@@ -7,6 +7,8 @@ public class Calculos_geometricos {
 	public static void main(String[] args) {
 		Area_triangulo();
 		Area_circunferencia();
+		
+		Area_Rectagunlo();
 		scanner.close();
 	}
 
@@ -75,6 +77,24 @@ public class Calculos_geometricos {
         System.out.println("El area lateral de la superficie del cilindro es: " + areaLateral);
         System.out.println("El area total de la superficie del cilindro: " + areaTotal);
     }
+    public static void Area_Rectagunlo() {
+    	System.out.println("Introduce la base: ");
+		double base = scanner.nextDouble();
+		System.out.println("Introduce la altura: ");
+		double altura = scanner.nextDouble();
+		double areaCalculada = calcularAreaRectangulo(base, altura);
+		imprimeResultRectangulo(areaCalculada);
+		scanner.close();
+    }
+    
+    public static double calcularAreaRectangulo(double base, double altura) {
+		double resultado = base * altura;
+		return resultado;
+	}
+
+	public static void imprimeResultRectangulo(double resultado) {
+		System.out.println("El area del rectangulo es: " + resultado);
+	}
     
     
 }
