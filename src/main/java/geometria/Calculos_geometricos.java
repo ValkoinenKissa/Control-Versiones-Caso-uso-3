@@ -9,6 +9,7 @@ public class Calculos_geometricos {
 		Area_circunferencia();
 		
 		Area_Rectagunlo();
+		Area_cubo();
 		scanner.close();
 	}
 
@@ -96,5 +97,17 @@ public class Calculos_geometricos {
 		System.out.println("El area del rectangulo es: " + resultado);
 	}
     
-    
+    public static void Area_cubo() {
+
+        System.out.print("Ingrese la longitud del lado del cubo: ");
+        double lado = scanner.nextDouble();
+
+        // Llamada al método estático para calcular el área del cubo
+        double area = calcularArea(lado);
+
+        System.out.println("Área del cubo: " + area);
+    }
+    public static double calcularArea(double lado) {
+        return 6 * Math.pow(lado, 2);
+    }
 }
